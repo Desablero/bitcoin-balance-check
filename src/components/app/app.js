@@ -21,7 +21,6 @@ export default class App extends Component {
         const onAddAddress = (address) => {
             this.btcApi.getAddressInfo(address)
             .then((addressInfo) => {
-                console.log(addressInfo);
                 this.setState(({addressList}) => {
                     const oldList = addressList
                     const newList = [...oldList, addressInfo]
@@ -30,18 +29,34 @@ export default class App extends Component {
                     }
                 })
             })
+        }        
+
+        const onDeleteAddress = (id) => {
+            this.setState(({addressList}) => {
+                const idx = this.state.addressList.findIndex((ad) => {
+                    return ad.id === id
+                }) 
+                console.log(idx);
+                const oldList = addressList
+                const newList = [...oldList.slice(0,idx), ...oldList.slice(idx+1)]
+                return {
+                    addressList: newList
+                }
+            })
         }
 
-        console.log(this.state.addressList);
-        
-
         const {addressList} = this.state
+        console.log(addressList);
 
         return(
             <div>
                 <h1 className="main-title">BBC</h1>
                 <AddAddress onAddAddress={onAddAddress}/>
-                <CardList addressList={this.state.addressList}/>
+                <button onClick={() => onAddAddress('34xp4vRoCGJym3xR7yCVPFHoCNxv4Twseo')}>Add</button>
+                <CardList addressList={this.state.addressList}
+                          onDeleteAddress={onDeleteAddress}
+                    />
+                
             </div>
         )
     }

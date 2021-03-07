@@ -10,7 +10,7 @@ export default class CardAddress extends Component {
 
     render(){
 
-        const {address} = this.props
+        const {address, onDeleteAddress} = this.props
 
         return(
             <div className="card-address">
@@ -21,7 +21,11 @@ export default class CardAddress extends Component {
                         ></img>
                     </div>
                     <div className="card-address-left-qr-border"></div>
-                    <span className="card-address-left-delete-address">Delete Address</span>
+                    <span className="card-address-left-delete-address"
+                            onClick={() => {
+                                onDeleteAddress(address.id)
+                            }}
+                    >Delete Address</span>
                 </div>
 
                 <div className="card-address-right">
