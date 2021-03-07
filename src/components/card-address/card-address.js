@@ -26,8 +26,8 @@ export default class CardAddress extends Component {
 
                 <div className="card-address-right">
                     <div className="card-address-right-balance">
-                        <span>0.01000000 BTC</span>
-                        <span> = $485.42</span>
+                        <span>{address.balance} BTC</span>
+                        {/* <span> = $485.42</span> */}
                     </div>
                     <div className="card-address-right-border">
                         <span className="card-address-right-address">{address.address}</span>
