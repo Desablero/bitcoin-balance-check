@@ -1,8 +1,106 @@
-.card-address-left-qr-code img{
-    width: 100px;
-    height: 100px;
+.card-address {
+  max-width: 600px;
+  min-width: 500px;
+  max-height: 200px;
+  min-height: 200px;
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
-.card-address-left-delete-address {
-    cursor: pointer;
+.card-address-left {
+    max-width: 160px;
+    min-width: 160px;
+    position: relative;
+    background-color: #6587A7;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    text-align: center;
+
+}
+
+.card-address-left-qr-code img {
+    width: 120px;
+    height: 120px;
+    position: relative;
+    display: block;
+    margin-top: 25%;
+    margin-right: 12.5%;
+    margin-left: 12.5%;
+
+    border-radius: 5%;    
+    border-bottom-right-radius: 0%;
+}
+
+.card-address-left-delete {
+  cursor: pointer;
+  /* display: block; */
+  word-wrap: break-word;
+  margin-top: 10%;
+  color: white;
+}
+
+
+
+
+
+
+.card-address-right {
+  width: 67%;
+  text-align: center;
+  background-color: #AAC6D8;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  position: relative;
+}
+.card-address-right-label {
+    position: relative;
+    padding-top: 2%;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #37658D
+}
+
+.card-address-right-balance {
+  margin: auto;
+  display: block;
+  position: relative;   
+  color: #3A5773
+}
+
+.card-address-right-balance-btc {
+  word-wrap: break-word;
+  text-overflow: clip;
+  font-size: 2rem;
+  margin-bottom: -2%;
+  font-weight: 400;
+  padding-top: 8%;
+}
+
+.card-address-right-balance-usd {
+  /* Пренос большо текста на новую строку */
+  word-wrap: break-word;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 300;
+  padding-top: 3%;
+}
+
+.card-address-right-address {
+  word-wrap: break-word;
+  position: relative;
+  color: #6487A7;
+  padding-top: 8%;
+}
+
+.card-address-right-more {
+  display: inline-block;
+  text-align: center;
+  width: 1ch;
+  position: absolute;
+    margin: -32% 46%;
+  word-wrap: break-word;
+  color: white;
 }

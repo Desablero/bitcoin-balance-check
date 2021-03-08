@@ -9,10 +9,10 @@ export default class BTCAPI {
             console.log(`Упс, ошибка: ${err}`);
         })
     
-        if (!res.ok) {
-          throw new Error(`Не удалось получить данные из API ${this._apiBase}${url}` +
-            `, код ошибки: ${res.status}`)
-        }
+        // if (!res.ok) {
+        //   throw new Error(`Не удалось получить данные из API ${this._apiBase}${url}` +
+        //     `, код ошибки: ${res.status}`)
+        // }
         return await res.json();
       }
 

@@ -15,17 +15,16 @@ export default class CardList extends Component {
 
         const element = addressList.map((address) => {
             return (
-                <li key={address.id}><CardAddress address={address}
+                <div key={address.id}><CardAddress address={address}
                                                   onDeleteAddress={onDeleteAddress}
-                /></li>
+                /></div>
             )
         })
 
         return(
-            <ul>
-                {element}
-            </ul>
-            
+                <div>
+                    {element}
+                </div>       
         )
     }
 }

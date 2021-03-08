@@ -26,7 +26,7 @@ export default class AddAddress extends Component {
         }
         
         return(
-                <form onSubmit={onSubmit}>
+                <form className="add-address-form" onSubmit={onSubmit}>
                     <input placeholder="Enter the address"
                            onChange={this.onChangeItem.bind(this)} 
                            value={this.state.label}
