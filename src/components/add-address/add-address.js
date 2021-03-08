@@ -1,39 +1,60 @@
-import React, {Component} from 'react'
+import React, { Component } from "react";
 
-import './add-address.css'
+import "./add-address.css";
 
 export default class AddAddress extends Component {
+  state = {
+    label: "",
+    address: "",
+  };
 
-    state = {
-        label: ''
-    }  
+  onChangeLabel(event) {
+    const input = event.target.value;
+    this.setState({ label: input });
+  }
+  onChangeAddress(event) {
+    const input = event.target.value;
+    this.setState({ address: input });
+  }
 
-    onChangeItem (event) {
-        const input = event.target.value
-        this.setState(
-            {label: input}
-        )
-    }
+  render() {
+    const { onAddAddress } = this.props;
+    const { address, label } = this.state;
 
-    render(){
+    const onSubmit = (e) => {
+      e.preventDefault();
+      if (label === "") {
+        alert("Print address name");
+        return;
+      } else if (address === "") {
+        alert("Print address");
+        return;
+      } else if (label.length > 21) {
+        alert("Длина имени не должна превышать 21 символ");
+        this.setState({ label: "", address: "" });
+        return;
+      } else {
+        onAddAddress(this.state.address, this.state.label);
+        this.setState({ label: "", address: "" });
+      }
+    };
 
-        const {onAddAddress} = this.props
-
-        const onSubmit = (e) => {
-            e.preventDefault()
-            onAddAddress(this.state.label)
-            this.setState({label: ''})
-        }
-        
-        return(
-                <form className="add-address-form" onSubmit={onSubmit}>
-                    <input placeholder="Enter the address"
-                           onChange={this.onChangeItem.bind(this)} 
-                           value={this.state.label}
-                           type='text'
-                            ></input>
-                    <button>Add Address</button>
-                </form>
-        )
-    }
+    return (
+      <form className="add-address-form" onSubmit={onSubmit}>
+        <input
+          placeholder="Address label"
+          onChange={this.onChangeLabel.bind(this)}
+          value={label}
+          type="text"
+        ></input>
+        <input
+          placeholder="Enter the address"
+          onChange={this.onChangeAddress.bind(this)}
+          value={address}
+          type="text"
+        ></input>
+        <button>Add Address</button>
+      </form>
+    );
+  }
 }

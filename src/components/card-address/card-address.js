@@ -21,7 +21,7 @@ export default class CardAddress extends Component {
 
         <div className="card-address-right">
             <div className="card-address-right-label">
-                <span> {address.label}Address label </span>
+                <span> {address.label}</span>
             </div>
             <div className="card-address-right-balance">
                 <div className="card-address-right-balance-btc">

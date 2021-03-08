@@ -27,12 +27,14 @@ export default class App extends Component {
 
     render() {
 
-        const onAddAddress = (address) => {
+        const onAddAddress = (address, label) => {
             this.btcApi.getAddressInfo(address)
                 .then((addressInfo) => {
                     this.setState(({ addressList }) => {
                         const oldList = addressList
-                        const newList = [...oldList, addressInfo]
+
+                        const objLabel = {label}
+                        const newList = [...oldList, Object.assign({}, addressInfo, objLabel)]
                         return {
                             addressList: newList
                         }
@@ -58,11 +60,11 @@ export default class App extends Component {
         const { addressList, count } = this.state
 
     if (this.state.count>0) {
-                setTimeout(onAddAddress('34xp4vRoCGJym3xR7yCVPFHoCNxv4Twseo'), 1000)
-                setTimeout(onAddAddress('1iKupaKz422mtpsPaAoagna1Zzgwk15wN'), 100)
+                setTimeout(onAddAddress('34xp4vRoCGJym3xR7yCVPFHoCNxv4Twseo', 'Test'), 1000)
+                setTimeout(onAddAddress('1iKupaKz422mtpsPaAoagna1Zzgwk15wN', 'iKupa'), 1000)
                         this.state.count = 0
                     }
-        
+        console.log(addressList);
         
 
         return (
