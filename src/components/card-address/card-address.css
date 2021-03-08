@@ -93,6 +93,7 @@
   position: relative;
   color: #6487A7;
   padding-top: 8%;
+  cursor: pointer;
 }
 
 .card-address-right-more {
