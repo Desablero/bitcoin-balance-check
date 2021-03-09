@@ -41,19 +41,21 @@ export default class AddAddress extends Component {
 
     return (
       <form className="add-address-form" onSubmit={onSubmit}>
-        <input
-          placeholder="Address label"
-          onChange={this.onChangeLabel.bind(this)}
-          value={label}
-          type="text"
-        ></input>
-        <input
-          placeholder="Enter the address"
-          onChange={this.onChangeAddress.bind(this)}
-          value={address}
-          type="text"
-        ></input>
-        <button>Add Address</button>
+        <div className="add-address-form-inputs">
+          <button className="add-address-form-inputs">ADD</button>
+          <input className="add-address-form-label"
+            placeholder="Address label"
+            onChange={this.onChangeLabel.bind(this)}
+            value={label}
+            type="text"
+          ></input>
+          <input className="add-address-form-address"
+            placeholder="Enter the address"
+            onChange={this.onChangeAddress.bind(this)}
+            value={address}
+            type="text"
+          ></input>
+        </div>
       </form>
     );
   }

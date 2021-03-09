@@ -1,3 +1,41 @@
 .add-address-form {
     text-align: center;
+    min-width: 520px;
+}
+
+.add-address-form-inputs {
+    
+}
+.add-address-form-inputs button{
+    width: 50px;
+    border: 2px solid #3A5773;
+    height: 26px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: #3A5772;
+    background-color: #6587A7;
+    border-right: none;
+}
+
+.add-address-form-label {
+    text-align: center;
+    border: 2px solid #3A5773;
+    color: #37658D;
+    background-color: #AAC6D8;
+    border-color: #3A5773;
+    border-right: none;
+    border-left: none;
+    height: 20px;
+    min-width: 150px;
+}
+
+.add-address-form-address {
+    text-align: center;
+    background-color: #AAC6D8;
+    border: 2px solid #3A5773;
+    width: 290px;
+    height: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: #37658D
 }
