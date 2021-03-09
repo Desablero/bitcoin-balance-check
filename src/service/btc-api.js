@@ -22,10 +22,11 @@ export default class BTCAPI {
 
   _transformAddress = (addressInfo) => {
     const id = `f${(~~(Math.random() * 1e8)).toString(16)}`;
+    
     return {
       id,
       address: addressInfo.data.address,
-      balance: addressInfo.data.balance,
+      balance: addressInfo.data.balance/1e8,
       send: addressInfo.data.send,
       transactions: addressInfo.data.tx_count,
     };

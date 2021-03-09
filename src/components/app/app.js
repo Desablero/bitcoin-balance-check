@@ -16,14 +16,7 @@ export default class App extends Component {
     state = {
         addressList: [],
         count: 1
-    }
-
-        
-                
-
-    componentDidMount () {
-
-    }
+    }              
 
     render() {
 
@@ -56,16 +49,14 @@ export default class App extends Component {
             })
         }
 
-
         const { addressList, count } = this.state
 
+        // For debuging
     if (this.state.count>0) {
                 setTimeout(onAddAddress('34xp4vRoCGJym3xR7yCVPFHoCNxv4Twseo', 'Test'), 1000)
                 setTimeout(onAddAddress('1iKupaKz422mtpsPaAoagna1Zzgwk15wN', 'iKupa'), 1000)
                         this.state.count = 0
                     }
-        console.log(addressList);
-        
 
         return (
             <div>
