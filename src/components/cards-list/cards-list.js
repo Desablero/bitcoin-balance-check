@@ -11,12 +11,13 @@ export default class CardList extends Component {
 
     render(){
 
-        const {addressList, onDeleteAddress} = this.props
+        const {addressList, onDeleteAddress, USD} = this.props
 
         const element = addressList.map((address) => {
             return (
                 <div key={address.id}><CardAddress address={address}
                                                   onDeleteAddress={onDeleteAddress}
+                                                  USD={USD}
                 /></div>
             )
         })

@@ -3,10 +3,13 @@ import React, { Component } from "react";
 import "./card-address.css";
 
 export default class CardAddress extends Component {
-  state = {};
 
   render() {
-    const { address, onDeleteAddress } = this.props;
+    const { address, onDeleteAddress, USD } = this.props;
+
+    // Переводим BTC в USD
+    const currentUsdPrice = Math.round(address.balance * USD)
+
 
     return (
       <div className="card-address">
@@ -34,7 +37,7 @@ export default class CardAddress extends Component {
               <span> {address.balance} BTC </span>
             </div>
             <div className="card-address-right-balance-usd">
-              <span>= $485.42</span>
+              <span> = ${currentUsdPrice}</span>
             </div>
           </div>
           <div className="card-address-right-address">
