@@ -5,10 +5,6 @@ import CardAddress from '../card-address'
 
 export default class CardList extends Component {
 
-    state = {
-
-    }  
-
     render(){
 
         const {addressList, onDeleteAddress, USD} = this.props

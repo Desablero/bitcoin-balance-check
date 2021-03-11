@@ -26,10 +26,6 @@ export default class App extends Component {
       })
 }
 
-  constructor () {
-    super();
-  }
-
   componentDidMount() {
     this.priceUSD()
   }
@@ -66,10 +62,7 @@ export default class App extends Component {
           addressList: newList,
         };
       });
-    };
-
-   
-        
+    };        
 
     // // For debuging
     if (count > 0) {
@@ -81,16 +74,8 @@ export default class App extends Component {
         onAddAddress("1iKupaKz422mtpsPaAoagna1Zzgwk15wN", "iKupa"),
         2000
       );
-      setTimeout(
-        onAddAddress("34xp4vRoCGJym3xR7yCVPFHoCNxv4Twseo", "Test2"),
-        3000
-      );
       this.state.count = 0;
     }
-
-    console.log(addressList);
-    console.log(USD);
-
 
     return (
       <div>
