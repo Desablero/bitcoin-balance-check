@@ -66,11 +66,7 @@ export default class App extends Component {
 
     // // For debuging
     if (count > 0) {
-      setTimeout(
-        onAddAddress("1D39pTbxbnsU7dciKkxnV5QctpfF3qM3Tj", "Test"),
-        1000
-      );
-      setTimeout(
+       setTimeout(
         onAddAddress("1iKupaKz422mtpsPaAoagna1Zzgwk15wN", "iKupa"),
         2000
       );

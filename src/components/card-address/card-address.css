@@ -15,30 +15,26 @@
     min-width: 160px;
     position: relative;
     background-color: #6587A7;
-    border-top-left-radius: 40px;
-    border-bottom-left-radius: 40px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
     text-align: center;
 
 }
 
-.card-address-left-qr-code img {
+.card-address-left-qr-code {
     width: 120px;
     height: 120px;
     position: relative;
-    display: block;
-    margin-top: 25%;
-    margin-right: 12.5%;
-    margin-left: 12.5%;
-
-    border-radius: 5%;    
-    border-bottom-right-radius: 0%;
+    display: inline-block;
+    margin-right: 0%;
+    margin-top: 21%;
 }
 
 .card-address-left-delete {
   cursor: pointer;
   /* display: block; */
   word-wrap: break-word;
-  margin-top: 10%;
+  margin-top: 6%;
   color: white;
 }
 
@@ -51,8 +47,8 @@
   width: 67%;
   text-align: center;
   background-color: #AAC6D8;
-  border-top-right-radius: 40px;
-  border-bottom-right-radius: 40px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
   position: relative;
 }
 .card-address-right-label {
