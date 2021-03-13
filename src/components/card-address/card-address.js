@@ -50,11 +50,12 @@ export default class CardAddress extends Component {
             </div>
           </div>
           <div className="card-address-right-address">
-            <span
+          <span
               onClick={() => {
                 navigator.clipboard.writeText(address.address);
-                alert('Address copied to clipboard =)')
-              }}>
+              }}
+              
+            >
               {address.address}
             </span>
           </div>

@@ -20,7 +20,7 @@ export default class CardList extends Component {
         })
 
         return(
-                <div>
+                <div className="address-list">
                     {element}
                 </div>       
         )

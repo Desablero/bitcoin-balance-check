@@ -5,8 +5,8 @@
   min-height: 200px;
   position: relative;
   display: flex;
-  margin: 1% auto;
-  margin-top: 2%;
+  margin: auto;
+  margin-top: 3%;
   margin-bottom: 2%;
 }
 
@@ -71,7 +71,7 @@
 }
 
 .card-address-right-balance-usd {
-  /* Пренос большо текста на новую строку */
+  /* Пренос большого текста на новую строку */
   word-wrap: break-word;
   font-size: 1.5rem;
   font-style: italic;
@@ -83,6 +83,6 @@
   word-wrap: break-word;
   position: relative;
   color: #6487A7;
-  padding-top: 8%;
+  margin-top: 8%;
   cursor: pointer;
 }

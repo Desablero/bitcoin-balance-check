@@ -14,7 +14,7 @@ export default class BTCAPI {
   async getResource(url) {
     const res = await fetch(`${this._apiBase}${url}`)
     .catch((err) => {
-      alert(`Возникла непредвиденная ошибка: ${err}`);
+      alert(`Возникла непредвиденная ошибка c API. ${err}`);
     });
 
     if (!res.ok) {
