@@ -1,11 +1,9 @@
 .add-address-form {
     text-align: center;
-    min-width: 520px;
+    min-width: 500px;
+    display: inline;
 }
 
-.add-address-form-inputs {
-    
-}
 .add-address-form-inputs button{
     width: 50px;
     border: 2px solid #3A5773;
@@ -37,5 +35,5 @@
     height: 20px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    color: #37658D
+    color: #37658D;
 }

@@ -11,9 +11,10 @@ export default class CardList extends Component {
 
         const element = addressList.map((address) => {
             return (
-                <div key={address.id}><CardAddress address={address}
-                                                  onDeleteAddress={onDeleteAddress}
-                                                  USD={USD}
+                <div key={address.id}>
+                    <CardAddress address={address}
+                                onDeleteAddress={onDeleteAddress}
+                                USD={USD}
                 /></div>
             )
         })

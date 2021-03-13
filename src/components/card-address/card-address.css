@@ -18,7 +18,6 @@
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
     text-align: center;
-
 }
 
 .card-address-left-qr-code {
@@ -38,11 +37,6 @@
   color: white;
 }
 
-
-
-
-
-
 .card-address-right {
   width: 67%;
   text-align: center;
@@ -51,6 +45,7 @@
   border-bottom-right-radius: 30px;
   position: relative;
 }
+
 .card-address-right-label {
     position: relative;
     padding-top: 2%;
@@ -90,14 +85,4 @@
   color: #6487A7;
   padding-top: 8%;
   cursor: pointer;
-}
-
-.card-address-right-more {
-  display: inline-block;
-  text-align: center;
-  width: 1ch;
-  position: absolute;
-    margin: -32% 46%;
-  word-wrap: break-word;
-  color: white;
 }
